@@ -7,6 +7,9 @@ import { auth, currentUser } from "@clerk/nextjs";
 import { User } from "@/types/user";
 import { insertUser } from "@/models/user";
 import { saveUser } from "@/services/user";
+
+export const maxDuration = 60;
+
 export async function POST(req: Request) {
     const {description} = await req.json();
     const user = await currentUser();
