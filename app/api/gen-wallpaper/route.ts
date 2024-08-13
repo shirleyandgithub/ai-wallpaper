@@ -40,7 +40,6 @@ export async function POST(req: Request) {
 
     const img_size = "1792x1024";
     const llm_name = "dall-e-3";
-    console.log("llm_name: ", llm_name);
     const llm_params: ImageGenerateParams = {
         prompt: `generate a desktop wallpaper about: ${description}`,
         model: llm_name,
@@ -50,12 +49,13 @@ export async function POST(req: Request) {
         size: img_size,
         style: "natural",
     };
-    console.log("llm_params: ", llm_params);
+    
     const result = await client.images.generate(llm_params);
 
     console.log("generate wallpaper result: ", result);
 
     const raw_img_url = result.data[0].url;
+    
     if (!raw_img_url) {
       return Response.json({
         code: -1,
@@ -69,8 +69,8 @@ export async function POST(req: Request) {
       process.env.AWS_BUCKET || "aiwallpaper-shirley",
       `wallpapers/${img_name}.png`
     );
+    
     const img_url = s3_img.Location;
-
     const created_at = (new Date()).toISOString();
     
     const wallpaper: Wallpaper = {
@@ -82,7 +82,9 @@ export async function POST(req: Request) {
         llm_params: JSON.stringify(llm_params),
         created_at: created_at,
       };
+
       await insertWallpaper(wallpaper);
+      console.log("insertWallpaper done");
 
     // return Response.json({
     //     code: 0,

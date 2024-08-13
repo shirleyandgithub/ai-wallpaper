@@ -35,17 +35,19 @@ export async function insertWallpaper(wallpaper: Wallpaper) {
       limit = 50;
     }
     const offset = (page - 1) * limit;
-  
+    
     const db = getDb();
     const res = await db.query(
       `select * from wallpapers limit $1 offset $2`,
       [limit, offset]
     );
+    console.log("res: ", res);
     if (res.rowCount === 0) {
       return undefined;
     }
   
     const { rows } = res;
+    console.log("rows: ", rows);
     let wallpapers: Wallpaper[] = [];
     rows.forEach((row) => {
         const wallpaper: Wallpaper = {
@@ -60,6 +62,6 @@ export async function insertWallpaper(wallpaper: Wallpaper) {
         };
         wallpapers.push(wallpaper);
     });
-  
+    console.log("wallpapers: ", wallpapers);
     return wallpapers;
   }
