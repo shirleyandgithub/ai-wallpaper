@@ -2,6 +2,6 @@
   "extends": ["next/core-web-vitals", "plugin:react/recommended"],  
   "plugins": ["react"],  
   "rules": {  
-    "react/display-name": "off"  
+    "react/display-name": "warn"  
   }  
 }
