@@ -1,6 +1,5 @@
 {  
-  "extends": ["next/core-web-vitals", "plugin:react/recommended"],  
-  "plugins": ["react"],  
+  "extends": ["next/core-web-vitals", "plugin:react/recommended"], 
   "rules": {  
     "react/display-name": "warn"  
   }  
