@@ -1,0 +1,8 @@
+{
+    "functions": {
+      "include": [
+        "./api/**"
+      ],
+      "maxDuration": 60000
+    }
+}
