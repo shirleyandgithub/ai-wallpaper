@@ -37,6 +37,7 @@ export async function POST(req: Request) {
 
     const img_size = "1792x1024";
     const llm_name = "dall-e-3";
+    console.log("llm_name: ", llm_name);
     const llm_params: ImageGenerateParams = {
         prompt: `generate a desktop wallpaper about: ${description}`,
         model: llm_name,
@@ -46,6 +47,7 @@ export async function POST(req: Request) {
         size: img_size,
         style: "natural",
     };
+    console.log("llm_params: ", llm_params);
     const result = await client.images.generate(llm_params);
 
     console.log("generate wallpaper result: ", result);
