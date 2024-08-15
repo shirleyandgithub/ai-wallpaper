@@ -36,8 +36,6 @@ export async function POST(req: Request) {
 
     const client = getOpenAIClient();
 
-    console.log("client: ", client);
-
     const img_size = "1792x1024";
     const llm_name = "dall-e-3";
     const llm_params: ImageGenerateParams = {
@@ -52,7 +50,7 @@ export async function POST(req: Request) {
     
     const result = await client.images.generate(llm_params);
 
-    console.log("generate wallpaper result: ", result);
+    console.log("generate wallpaper result 0816: ", result);
 
     const raw_img_url = result.data[0].url;
     
