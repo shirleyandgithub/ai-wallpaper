@@ -5,21 +5,24 @@ import { useState } from "react";
 import { useEffect } from "react";
 import WallpaperList from "./WallpaperList";
 
+interface Props {
+    wallpapers: Wallpaper[];
+}
 
-export default function() {
-    const [wallpapers, setWallpapers] = useState <Wallpaper[] | null>(null);
-    const fetchWallpapers = async function () {
-        const result = await fetch("/api/get-wallpapers");
-        const {data} = await result.json();
+export default function({ wallpapers }: Props) {
+    // const [wallpapers, setWallpapers] = useState <Wallpaper[] | null>(null);
+    // const fetchWallpapers = async function () {
+    //     const result = await fetch("/api/get-wallpapers");
+    //     const {data} = await result.json();
 
-        if(data) {
-            setWallpapers(data);
-        }
-    };
+    //     if(data) {
+    //         setWallpapers(data);
+    //     }
+    // };
 
-    useEffect(() => {
-        fetchWallpapers();
-    }, []);
+    // useEffect(() => {
+    //     fetchWallpapers();
+    // }, []);
 
     
     return (
