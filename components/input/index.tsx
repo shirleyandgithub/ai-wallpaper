@@ -1,10 +1,17 @@
 "use client";
-import { Input } from "@/components/ui/input";
+
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
+
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { Input } from "@/components/ui/input";
+import { Wallpaper } from "@/types/wallpaper";
 
 
-export default function () {
+interface Props {
+    setWallpapers: Dispatch<SetStateAction<Wallpaper[]>>;
+}
+
+export default function ({ setWallpapers }: Props) {
 
     const [description, setDescription] = useState("");
     const [loading, setLoading] = useState(false);
