@@ -59,6 +59,7 @@ export async function insertWallpaper(wallpaper: Wallpaper) {
             llm_name: row.llm_name,
             llm_params: row.llm_params,
             created_at: row.created_at,
+            user_avatar: "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvdXBsb2FkZWQvaW1nXzJjbmc0QUpHRlYyMHIwNzl1MGZlN3VMMHk0SiJ9",
         };
         wallpapers.push(wallpaper);
     });
