@@ -31,6 +31,7 @@ export default function ({ setWallpapers }: Props) {
 
         if(data) {
             console.log("new wallpaper:", data);
+            setWallpapers((wallpapers: Wallpaper[]) => [data, ...wallpapers]);
         }
     };
 
