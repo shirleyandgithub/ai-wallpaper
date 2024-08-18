@@ -50,7 +50,7 @@ export async function POST(req: Request) {
     
     const result = await client.images.generate(llm_params);
 
-    console.log("generate wallpaper result 0816: ", result);
+    console.log("generate wallpaper result: ", result);
 
     const raw_img_url = result.data[0].url;
     
@@ -79,18 +79,12 @@ export async function POST(req: Request) {
         llm_name: llm_name,
         llm_params: JSON.stringify(llm_params),
         created_at: created_at,
+        user_avatar: avatarUrl,
       };
 
       await insertWallpaper(wallpaper);
       console.log("insertWallpaper done");
 
-    // return Response.json({
-    //     code: 0,
-    //     message: "ok",
-    //     data: {
-    //         img_url: "https://img1.baidu.com/it/u=4247035446,2400096902&fm=253&fmt=auto&app=120&f=JPEG?w=1024&h=640"
-    //     }
-    // })
     return Response.json({
         code: 0,
         message: "ok",

@@ -10,25 +10,8 @@ interface Props {
 }
 
 export default function({ wallpapers }: Props) {
-    // const [wallpapers, setWallpapers] = useState <Wallpaper[] | null>(null);
-    // const fetchWallpapers = async function () {
-    //     const result = await fetch("/api/get-wallpapers");
-    //     const {data} = await result.json();
-
-    //     if(data) {
-    //         setWallpapers(data);
-    //     }
-    // };
-
-    // useEffect(() => {
-    //     fetchWallpapers();
-    // }, []);
-
-    
+   
     return (
-    // <section className="max-w-6xl mx-auto">
-    //     <WallpaperList />
-    // </section>
     <section>
   <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-24">
     <div className="mb-8 text-center md:mb-12">
