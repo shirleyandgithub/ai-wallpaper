@@ -5,7 +5,9 @@ import { User } from "@/types/user";
 export async function saveUser(user: User) {
   try {
     const existUser = await findUserByEmail(user.email);
+    console.log("existUser: ", existUser);
     if (!existUser) {
+      console.log("insertUser");
       await insertUser(user);
     }
   } catch (e) {
