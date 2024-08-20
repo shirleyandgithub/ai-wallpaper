@@ -7,16 +7,19 @@ import Input from "../input";
 export default function() {
     return (
     <section>
-      <div className="relative mx-auto flex w-full max-w-[1120px] flex-col items-start px-5 pt-16">
-        <div className="lg:max-w-[80%]">
-          <h1 className="mb-5 text-primary text-4xl font-semibold md:text-8xl lg:mb-7">AI壁纸生成器 </h1>
-          <p className="mb-5 max-w-[528px] text-xl text-[#636262] lg:mb-8">帮你生成好看的壁纸</p>
-        </div>
-        <div className="flex justify-center">
-           
-        </div>
+      <header>
+      {/* Hero Container */}
+      <div className="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-5">
+        {/* Component */}
+        <div className="mx-auto mb-8 w-full max-w-3xl text-center md:mb-12 lg:mb-16">
+          {/* Hero Title */}
+          <h1 className="mb-4 text-4xl font-bold md:text-6xl text-orange-400">
+              AI壁纸生成器
+          </h1>
         
+        </div>
       </div>
+    </header>
 
        </section>
     );

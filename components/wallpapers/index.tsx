@@ -16,9 +16,7 @@ export default function({ wallpapers }: Props) {
   <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-24">
     <div className="mb-8 text-center md:mb-12">
     <h2 className="text-3xl font-bold md:text-5xl">全部壁纸</h2>
-    <p className="mt-4 text-[#636262] sm:text-sm md:text-base">
-        一共100条由 AI 生成的壁纸
-    </p>
+    
     </div>
     <ul className="mb-6 grid gap-5 sm:grid-cols-2 md:grid-cols-3 md:mb-16">
         {wallpapers&&
