@@ -1,4 +1,10 @@
-开发栈：TypeScript + React + Next.js+ Node.js 
+AI壁纸生成项目，输入文字描述自动生成精美壁纸。
+
+
+
+开发栈：TypeScript + React + Next.js+ Node.js + tailwindcss
+
+open AI画图接口： dall-e-3   https://platform.openai.com/docs/api-reference/images     
 
 图片存储：aws
 
