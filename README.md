@@ -6,7 +6,7 @@ AI壁纸生成项目，输入文字描述自动生成精美壁纸。
 
 open AI画图接口：  https://platform.openai.com/docs/api-reference/images     
 
-图片存储：aws
+图片存储：AWS  S3
 
 数据库：supabase
 
